@@ -29,6 +29,10 @@ class Config:
     red_pixel_threshold: int = 12    # 点击点周围红像素数 >= 该值判定成功
     verify_radius: int = 12          # 验证区域半径（像素）
 
+    # ---- 自动模式（一次性截图）----
+    auto_mode: bool = False          # True: 只截一次图，点完该帧全部目标后按翻页键并结束
+    page_direction: str = "down"     # 自动模式结束时的翻页键: down=PageDown, up=PageUp
+
     # ---- 红色完成态排除 ----
     red_ratio_threshold: float = 0.15  # 轮廓框内红色占比超过该值视为已完成
 
