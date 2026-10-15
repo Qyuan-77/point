@@ -1,0 +1,11 @@
+# Python 缓存（不再纳入版本管理）
+__pycache__/
+*.py[cod]
+
+# 打包产物（打包为exe.bat 生成）
+build/
+dist/
+*.spec
+
+# 临时/草稿文件
+_scratch_*

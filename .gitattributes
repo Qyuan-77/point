@@ -1,0 +1,15 @@
+# 行尾统一策略
+#
+# .bat / .cmd 必须是 CRLF：cmd.exe 对 LF 行尾的批处理会解析失败
+# （本项目 run.bat 就踩过这个坑，详见 code_explain/run.bat.md 第 4 节）。
+# 这里锁定检出时的行尾，避免别人克隆后 run.bat 又被还原成 LF 而损坏。
+* text=auto
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+
+# 二进制与「证据文件」不做任何行尾/编码转换
+*.lnk binary
+run.bat.bak_lf-broken -text
